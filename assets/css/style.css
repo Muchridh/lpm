@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #4b1a9a; /* Warna ungu */
+    --secondary-color: #53268f; /* Warna biru */
+    --left-section-width: 30%;
+    --right-section-width: 70%;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.split-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-section {
+    width: var(--left-section-width);
+    background: linear-gradient(150deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.left-content {
+    max-width: 90%;
+    text-align: center;
+    z-index: 2;
+}
+.right-section {
+    width: var(--right-section-width);
+    background-image: url('../images/unira.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay untuk meningkatkan keterbacaan */
+.right-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.system-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.system-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.system-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.btn-dashboard {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-dashboard:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+    
+    .left-section, .right-section {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .left-section {
+        height: 40vh;
+    }
+    
+    .right-section {
+        height: 60vh;
+    }
+    
+    .system-title {
+        font-size: 2rem;
+    }
+    
+    .system-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .logo {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}
+/* === FOOTER BAGIAN UNGU === */
+
+.left-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 20px;
+}
+
+.left-footer p {
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Responsif untuk footer */
+@media (max-width: 768px) {
+    .left-footer {
+        position: relative;
+        bottom: auto;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+}
+/* === TAMBAHAN UNTUK TEKS DI BAGIAN KANAN === */
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+}
+
+.right-section::before {
+    background: linear-gradient(
+        to right, 
+        rgba(75, 26, 154, 0.3) 0%, 
+        rgba(83, 38, 143, 0.2) 100%
+    );
+    mix-blend-mode: multiply;
+}
+
+.right-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.right-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 80%;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+/* Efek khusus untuk konten kanan */
+.right-content {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .right-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .right-section {
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .right-section h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .right-section p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    
+    .right-section::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(75, 26, 154, 0.3) 0%,
+            rgba(83, 38, 143, 0.5) 100%
+        );
+    }
+}

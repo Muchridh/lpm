@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #6a5acd;
+    --secondary-color: #4b1a9a;
+    --light-purple: rgba(106, 90, 205, 0.15);
+    --white: #ffffff;
+    --text-dark: #2d0b5e;
+}
+
+.header-spmi {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-lpm {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.95;
+    color: var(--white);
+}
+
+.header-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white);
+}
+
+.header-user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-user-text strong {
+    font-size: 0.95rem;
+    color: var(--white);
+}
+
+.role-label {
+    font-size: 0.8rem;
+    background-color: var(--light-purple);
+    color: var(--white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--light-purple);
+    color: var(--white);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .logo-container {
+        justify-content: center;
+    }
+    
+    .header-user-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .header-title {
+        font-size: 1.4rem;
+    }
+    
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+.header-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white);
+}
+
+.header-user-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-user-text strong {
+    font-size: 0.95rem;
+    color: var(--white);
+}
+
+.role-label {
+    font-size: 0.8rem;
+    background-color: var(--light-purple);
+    color: var(--white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--light-purple);
+    color: var(--white);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}

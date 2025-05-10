@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #6a5acd;
+    --secondary-color: #4b1a9a;
+    --light-purple: rgba(106, 90, 205, 0.15);
+    --white: #ffffff;
+    --text-dark: #2d0b5e;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../images/unira-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 3rem 3rem;
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-text h2 {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.access-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-top: 5px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.access-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.card-body-custom {
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.btn-access {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+    align-self: center;
+    margin-top: auto;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-access:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border: 1.5px solid var(--primary-color);
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.footer-spmi {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .card-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    .welcome-text {
+        margin-bottom: 2rem;
+    }
+}
+
